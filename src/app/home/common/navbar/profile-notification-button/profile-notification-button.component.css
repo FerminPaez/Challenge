@@ -1,0 +1,45 @@
+/*
+#profile{
+    background-color: white;
+    height: 2.3em;
+    width: 2.3em;
+    border-radius: 100%;
+    margin: auto;
+    display: table;
+}
+
+p{
+    font-size: 1.2em;
+    font-weight: bold;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}*/
+.notification {
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+    padding: 16px ;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+
+    /*width: 2em;*/
+    text-align: justify;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .notification:hover {
+    background: red;
+  }
+
+  .notification .badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: white;
+    color: red;
+  }

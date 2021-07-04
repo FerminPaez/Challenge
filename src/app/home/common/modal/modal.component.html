@@ -1,0 +1,85 @@
+<div class="row justify-content-center mh-em-30">
+  <div class="col-sm-12 col-md-8">
+    <h3 class="mt-2 ml-4">{{ title }}</h3>
+    <form [formGroup]="formMeet" class="p-4">
+      <input  
+      type="text"  
+      id="title" 
+      class= "form-control mt-2" 
+      formControlName="title" 
+      placeholder="Titulo"
+      >
+      <input  
+      type="text"  
+      id="description" 
+      class= "form-control mt-2 " 
+      formControlName="description" 
+      placeholder="Descripcion"
+      >
+      <!--Este se tiene que autocalculoar y mostrar.... 
+        quizas no tendira que ser un input en este lado-->
+      <input  
+      type="number"  
+      id="beer_box" 
+      class= "form-control mt-2" 
+      formControlName="beer_box" 
+      placeholder="Cajas de cerveza"
+      >
+      <!--Para cargar este se tendria que hacer una peticion a API
+      de clima y obtenerse automaticamente-->
+      <input  
+      type="text"  
+      id="temperature" 
+      class= "form-control mt-2" 
+      formControlName="temperature" 
+      placeholder="Temperatura del dia"
+      >
+      <input  
+      type="text"  
+      id="location" 
+      class= "form-control mt-2" 
+      formControlName="location" 
+      placeholder="Lugar"
+      >
+      <input  
+      type="date"  
+      id="date" 
+      class= "form-control mt-2" 
+      formControlName="date" 
+      placeholder="Fecha aaaa/mm/dd"
+      >
+
+      
+      <button class="btn btn-lg btn-outline-danger  mt-5" (click)="accept()">{{ btnOkText }}</button>
+      <button class="btn btn-lg btn-outline-danger ml-4 mt-5" (click)="decline()">{{ btnCancelText }}</button>      
+    </form>
+  </div>
+  <div class="col-sm-12 col-md-4" id="group-button">
+    <h3 class="mt-2 ml-4">Invitar</h3>
+    <div class="p-4 mh-50">
+      <ng-container *ngIf="selected.length!==0">
+        <div class="row">
+          <ng-container *ngFor="let user of selected">
+            <div class="col">
+              <span
+              (click)="removeUser(user)" 
+              class="badge rounded-pill bg-danger btn">{{ user.email }}</span>    
+            </div>
+          </ng-container>
+        </div>
+      </ng-container>
+      <ng-container *ngFor="let user of users">
+        <button type="button" 
+                class="btn btn-outline-danger btn-list m-1"
+                (click)="addUser(user)"
+                >
+          {{ user.email || user.nombre }}
+        </button>
+      </ng-container>
+    </div> 
+  </div>
+</div>
+
+
+
+<pre>{{ closeResult }}</pre>

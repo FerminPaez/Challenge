@@ -1,0 +1,13 @@
+<div class="float-button-group">
+  <a  class="btn-floating float" (click)="displayOptions()" [ngClass]="{'rotate':isButtonListVisible}">
+  <!--  <em class="fa fa-plus my-float">
+    </em>-->
+    <em>
+    <fa-icon class="fa fa-plus my-float" [icon]="faPlus"></fa-icon></em>
+  </a>
+  <ul class="dropdown-menu-rigth" [ngClass]="{'open': isButtonListVisible}">
+    <li><button class="btn btn-floating open" (click)="createMeet()">Crear Meet</button></li>
+    <li><button class="btn btn-floating">segundo</button></li>
+    <li><button class="btn btn-floating">tercero</button></li>
+  </ul>
+</div>

@@ -1,0 +1,17 @@
+h1{
+    
+    color: white;
+}
+
+#navbar{
+    background-color:#FF0033 ;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    /*display: flex;
+    align-items: center;    */
+}
+
+.row{
+    display: flex;
+    align-items: center;
+}

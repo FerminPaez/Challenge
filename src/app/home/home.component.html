@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <section class="row">
+    <ng-container *ngFor="let meet of meets">
+      <app-meet [meet]='meet' class="col-6 mt-5" ></app-meet>
+    </ng-container>
+  </section>
+  
+</div>
+<app-float-button></app-float-button>
