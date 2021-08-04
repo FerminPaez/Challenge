@@ -14,6 +14,6 @@ constructor(private http: HttpClient) { }
 
   login( objectUser: LoginUser){
     const url = `${environment.ApiRestURL}/auth/login`;
-    return this.http.post<ResponseLogin>(url, objectUser);
+    return this.http.post<ResponseLogin>(url, objectUser).toPromise();
   }
 }
